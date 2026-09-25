@@ -1,0 +1,18 @@
+Grafo — versão corrigida para Vercel
+
+Esta é a raiz do projeto: contém package.json, server.js, vercel.json,
+o diretório api/ e o diretório public/. Publique esta pasta inteira no Git
+ou como projeto da Vercel (Root Directory: a pasta que contém package.json).
+Não selecione public/ como Root Directory e não defina Output Directory.
+
+Os arquivos do navegador ficam em public/. A Vercel detecta o servidor
+Express e publica os arquivos de public/ em /.
+
+Após a publicação, verifique:
+  https://SEU-DOMINIO.vercel.app/assets/images/OLT.jpeg
+  https://SEU-DOMINIO.vercel.app/assets/images/grafo.png
+  https://SEU-DOMINIO.vercel.app/assets/js/app.js
+  https://SEU-DOMINIO.vercel.app/assets/css/styles.css
+
+Abra o site, adicione uma OLT, gere o diagrama e baixe um PNG.
+O desenho do diagrama usa Viz.js do cdnjs.cloudflare.com.

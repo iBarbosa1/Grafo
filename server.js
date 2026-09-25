@@ -5,6 +5,7 @@ const path = require('path');
 const app = express();
 const PORT = process.env.PORT || 3000;
 const rootDir = __dirname;
+const publicDir = path.join(rootDir, 'public');
 const apiPath = path.join(rootDir, 'api', 'equipamentos.json');
 
 app.disable('x-powered-by');
@@ -33,13 +34,13 @@ app.get('/api/equipamentos.json', (_req, res) => {
   res.sendFile(apiPath);
 });
 
-app.use(express.static(rootDir, {
+app.use(express.static(publicDir, {
   index: 'index.html',
   extensions: ['html']
 }));
 
 app.get('*', (_req, res) => {
-  res.sendFile(path.join(rootDir, 'index.html'));
+  res.sendFile(path.join(publicDir, 'index.html'));
 });
 
 app.listen(PORT, () => {
